@@ -174,7 +174,7 @@ def bbb_browser():
         WebDriverWait(browser, selenium_timeout).until(element)
 
         element = browser.find_element(By.ID, 'message-input')
-        chat_send = browser.find_elements(By.CSS_SELECTOR, '[aria-label="Send message"]')[0]
+        #chat_send = browser.find_elements(By.CSS_SELECTOR, '[aria-label="Send message"]')[0]
         # ensure chat is enabled (might be locked by moderator)
         if element.is_enabled() and chat_send.is_enabled():
            tmp_chatMsg = os.environ.get('BBB_CHAT_MESSAGE', "This meeting is streamed to")
